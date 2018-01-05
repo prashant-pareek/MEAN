@@ -2,25 +2,37 @@
 Demo mean stack application
 
 ## Commands
-1. Check node version: __node -v__
-2. Check npm version: __npm -v__
-3. Node REPL: __node__
-4. Go to directory: __cd MEAN__
-5. Run node file in terminal: __node app.js__
+Run node file in terminal:  
+__node setTimeout.js__
+__node readFileSync.js__
+__node readFileAsync.js__
 
 ## Code Description
-1. Spliting node application into multiple files
-2. Using require to load in files
-3. Exposing functionality using module.exports
+1. Asynchronous non blocking code
+2. Node needs asynchronous operations
+3. Asynchronous code and callbacks
+4. Dealing with commutational blockers
 
 ## Code Explanation
-require('instantHello');  
-- This will only look into node_modules folder. To load local directory file use  
-require('./instanHello');  
-- Here we can use .js extension after file name, but it is best practise to not include it.  
+node setTimeout.js
+- Learning about asynchronous code, that doesn't block main process  
 
-module.exports  
-- This is required to expose module methods to the application, so it can be imported in other files using require
+node readFileSync.js
+- Reading file synchronously
 
-var talk = require('./talk');  
-- Here require statment will look for talk.js file in same directory, if no file found, it will check for file index.js inside folder named talk
+node readFileAsync.js
+- Reading file asynchronously without affecting main process
+
+node commutational-blocking.js
+- Checking process that can block main process
+
+node commutational-non-blocking.js
+- Checking how to write non blocking code and putting blocking process to run in child process
+
+## Notes
+* Don't block main process of node js
+* If node process delay a single visitor, it will delay all the visitor
+* Node.js is designed to address I/O scalability, not commutational scalability
+* When asynchronous code completes, it calls callback functions
+* Heavy commutational process that are required to run in main process, needs to be handled by child process
+
