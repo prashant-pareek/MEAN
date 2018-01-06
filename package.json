@@ -1,0 +1,29 @@
+{
+  "name": "mean",
+  "version": "1.0.0",
+  "description": "MEAN stack application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashant-pareek/MEAN.git"
+  },
+  "keywords": [
+    "mean"
+  ],
+  "author": "Prashant Pareek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prashant-pareek/MEAN/issues"
+  },
+  "homepage": "https://github.com/prashant-pareek/MEAN#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "mocha": "^4.1.0"
+  }
+}
