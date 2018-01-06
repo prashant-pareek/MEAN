@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
-var routes = require('./routes');
+var routes = require('./api/routes');
 
 // middleware log every route before 
 // serving static files
@@ -20,17 +20,6 @@ app.use(function(req, res, next) {
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', routes);
-
-// sending file
-app.get('/file', function(req, res) {
-  console.log('Get the file');
-
-  res
-    .status(200)
-    // join to path variable current directory path
-    // using __dirname and file name
-    .sendFile(path.join(__dirname, 'app.js'));
-});
 
 // set app variable port to 3000
 app.set('port', 3000);
