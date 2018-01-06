@@ -3,34 +3,15 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
-// sending html file from public folder as response
-app.get('/', function(req, res) {
-  console.log('Get the Homepage');
+// app.use is a middleware
+// express.static method here checks for any url that
+// matches with any file in public folder, it will directly
+// send the file without generating the actual route
+// serves index.html file
+app.use(express.static(path.join(__dirname, 'public')));
 
-  // here we put public and index.html in separate arguments
-  // reason being different operating system uses different
-  // directory separator
-  res
-    .status(200)
-    .sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-// set route for get request at path /
-// passing request and response object
-// in callback function
-app.get('/', function(req, res) {
-  console.log('Get the Homepage');
-
-  // send text message to browser
-  //res.send('Express yourself');
-
-  // setting response status code
-  // by chainin status function 
-  // to response object
-  res
-    .status(404)
-    .send('Express yourself');
-});
+// set sub set of route to public 
+// app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // seding json response, useful for api response
 app.get('/json', function(req, res) {
