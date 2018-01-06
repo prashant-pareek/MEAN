@@ -2,6 +2,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var bodyParser = require('body-parser');
 
 var routes = require('./api/routes');
 
@@ -18,6 +19,11 @@ app.use(function(req, res, next) {
 // send the file without generating the actual route
 // serves index.html file
 app.use(express.static(path.join(__dirname, 'public')));
+
+// here bodyparser is run after serving static files
+// and before any routes
+// extended:false states that we only need string and array data
+app.use(bodyParser.urlencoded({ extended : false }));
 
 app.use('/api', routes);
 
