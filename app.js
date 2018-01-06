@@ -3,12 +3,32 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
+// middleware log every route before 
+// serving static files
+app.use(function(req, res, next) {
+  console.log(req.method, req.url);
+  next();
+});
+
+// logs only css routes, removing css from url
+app.use('/css', function(req, res, next) {
+  console.log(req.method, req.url);
+  next();
+});
+
 // app.use is a middleware
 // express.static method here checks for any url that
 // matches with any file in public folder, it will directly
 // send the file without generating the actual route
 // serves index.html file
 app.use(express.static(path.join(__dirname, 'public')));
+
+// middleware log only routes that comes 
+// after serving static files
+app.use(function(req, res, next) {
+  console.log(req.method, req.url);
+  next();
+});
 
 // set sub set of route to public 
 // app.use('/public', express.static(path.join(__dirname, 'public')));

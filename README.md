@@ -6,8 +6,8 @@ __npm start__
 - Starts node application
 
 ## Code Description
-1. Serving static files
-2. Delivering css, images and javascript
+1. Using middleware
+2. Logging routes
 
 ## Notes
-app.use is a middleware
+Order of middleware is important, because it run synchronously
