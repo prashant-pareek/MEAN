@@ -6,10 +6,10 @@ __npm start__
 - Starts node application
 
 ## Code Description
-1. Installing mongodb driver
-2. Creating a reusable connection
-3. Defining a connection string
-4. Accessing the connection from controllers
+1. Using database connection
+2. Finding multiple documents
+3. Return sub-set
+4. Searching for single document by ID
  
 
 
