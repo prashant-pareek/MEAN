@@ -6,9 +6,12 @@ __npm start__
 - Starts node application
 
 ## Code Description
-1. Getting querystring data in controllers
-2. Adding middleware for parsing forms
-3. Getting form data in controllers
+1. Installing mongodb driver
+2. Creating a reusable connection
+3. Defining a connection string
+4. Accessing the connection from controllers
+ 
 
-## Notes
-body-parser package is used to fetch post data and attaching to request object
+
+
+

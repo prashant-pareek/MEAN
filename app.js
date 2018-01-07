@@ -1,3 +1,5 @@
+require('./api/data/dbconnection.js').open();
+
 // load express module
 var express = require('express');
 var app = express();
