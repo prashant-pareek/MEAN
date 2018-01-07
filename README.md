@@ -6,10 +6,9 @@ __npm start__
 - Starts node application
 
 ## Code Description
-1. Using database connection
-2. Finding multiple documents
-3. Return sub-set
-4. Searching for single document by ID
+1. Adding new documents
+2. Validation & error trapping
+3. Formatting data correctly
  
 
 
