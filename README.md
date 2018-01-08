@@ -6,8 +6,11 @@ __npm start__
 - Starts node application
 
 ## Code Description
-1. URL patterns and http methods
-2. Consistent data structure
+1. Adding schema to the application
+2. Assigning data types
+3. Basic data validation
+4. Setting default values
+5. Compiling models
  
 
 
