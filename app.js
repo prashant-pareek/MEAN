@@ -1,4 +1,4 @@
-require('./api/data/dbconnection.js').open();
+require('./api/data/db.js');
 
 // load express module
 var express = require('express');
