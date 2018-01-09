@@ -1,7 +1,9 @@
 var mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
+
 var dburl = 'mongodb://localhost:27017/meanhotel';
 
-mongoose.connect(dburl);
+mongoose.connect(dburl, {useMongoClient: true });
 
 mongoose.connection.on('connected', function() {
   console.log('Mongoose connected to ' + dburl);
