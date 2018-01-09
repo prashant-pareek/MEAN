@@ -6,8 +6,8 @@ __npm start__
 - Starts node application
 
 ## Code Description
-1. Creating new documents using mongoose.
-2. Creating sub documents using mongoose.
+1. Updating the document
+2. Updating the sub document
  
 
 
