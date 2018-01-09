@@ -6,9 +6,10 @@ __npm start__
 - Starts node application
 
 ## Code Description
-1. Ensure data is correct
-2. Get multiple sub documents
-3. Get single sub document
+1. API route filtering
+2. Creating a geoJSON point
+3. Using mongoose to find places nearby
+4. Specifying search limits
  
 
 
